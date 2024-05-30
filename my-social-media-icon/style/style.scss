@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins';
+    background-image: linear-gradient(315deg, #fff 0, #d7e1ec 74%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+.container {
+    max-width: 500px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    cursor: pointer;
+}
+
+.container:hover {
+    .circle {
+        background-color: #DE463B;
+        color: #fff;
+        box-shadow: (0 10px 10px rgba(0, 0, 0, 0.4)), (0 -10px 10px rgba(0, 0, 0, 0.4) inset);
+    }
+    .textcher {
+        opacity: 1;
+        transform: translateY(-57px) translateX(2px);
+    }
+}
+.circle {
+    box-shadow: (0 10px 10px rgba(0, 0, 0, 0.1)), (0 -10px 10px rgba(0, 0, 0, 0.1) inset);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    width: 61px;
+    height: 61px;
+    background: #fff; 
+    transform: translatex(10px);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    i {
+        font-size: 25px;
+    }
+}
+
+.textcher {
+    position: absolute;
+    left: -7px;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    .comment {
+        color: #fff;
+        background: #DE463B;
+        display: inline-block;
+        padding: 9px 15px;
+        border-radius: 19px;
+        z-index: 2;
+    }
+    .squar {
+        position: absolute;
+        top: 27px;
+        right: 50%;
+        width: 16px;
+        height: 16px;
+        background-color: #DE463B;
+        transform: rotate(45deg) translateX(50%);
+        z-index: 0;
+    }
+}
+
+.container-git:hover {
+    .circle{
+        background-color: #333;
+        box-shadow: (0 10px 10px rgba(0, 0, 0, 0.4)), (0 -10px 10px rgba(0, 0, 0, 0.4) inset)
+    }  
+
+    .textcher{
+        transform: translateY(-57px) translateX(8px);
+    }
+}
+
+.textcher-git {
+    .comment{
+        background-color: #333;
+    }
+
+    .squar {
+        background-color: #333;
+    }
+}
+
+.container-twit:hover {
+    .circle{
+        background-color: #46C1F6;
+    }  
+
+    .textcher{
+        transform: translateY(-57px) translateX(8px);
+    }
+}
+
+.textcher-twit {
+    .comment{
+        background-color: #46C1F6;
+    }
+
+    .squar {
+        background-color: #46C1F6;
+    }
+}
+
+.container-insta:hover {
+    .circle{
+        background-color: #e1306c;
+    }  
+
+    .textcher{
+        transform: translateY(-57px) translateX(-6px);
+    }
+}
+
+.textcher-insta {
+    .comment{
+        background-color: #e1306c;
+    }
+
+    .squar {
+        background-color: #e1306c;
+    }
+}
+
+.container-face:hover {
+    .circle{
+        background-color: #3B5999;
+    }  
+
+    .textcher{
+        transform: translateY(-57px) translateX(-2px);
+    }
+}
+
+.textcher-face {
+    .comment{
+        background-color: #3B5999;
+    }
+
+    .squar {
+        background-color: #3B5999;
+    }
+}
