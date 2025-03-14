@@ -1,5 +1,6 @@
 $button-color: #feac00;
 $hover-color: #31a9cc;
+$transation: all 0.7s;
 
 @font-face {
     font-family: 'taha';
@@ -7,7 +8,8 @@ $hover-color: #31a9cc;
 }
 * {
     margin: 0;
-    padding: 0;box-sizing: border-box;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -31,12 +33,12 @@ a {
 
 .shop-card {
     .main-card {
-        transition: all 0.5s;
-        border-radius: 20px;
+        transition: $transation;
+        border-radius: 16px;
         img {
             width: 100%;
             position: relative;
-            transition: all 0.5s;
+            transition: $transation;
         }
 
         h5 {
@@ -59,11 +61,12 @@ a {
             padding: 1rem 0.5rem;
             border: 2px solid $button-color;
             outline: none;
+            cursor: pointer;
             background-color: #fff;
             font-family: 'taha';
-            border-radius: 20px;
+            border-radius: 12px;
             margin-bottom: 1.5rem;
-            transition: all 0.5s;
+            transition: $transation;
         }
 
     }
@@ -71,16 +74,24 @@ a {
     .main-card:hover {
         background-color: $hover-color;
         transform: translateY(-20px);
-        box-shadow: 0 0px 24px -1px #31a9cc;
+        transition: $transation;
+        box-shadow: 0 0px 24px -1px #288cab,0 0px 24px 0px #288cab inset;
 
         img {
             transform: translateY(-20px);
+            transition: $transation;
         }
 
         button {
             background-color: $button-color;
             color: #fff;
+            transition: all 0;
+            border: none;
         }
+        button:hover {
+            box-shadow: 0px 0px 14px 0px rgba(48,48,48,0.72), 0px 0px 14px -5px rgba(48,48,48,0.72) inset;
+        }
+        
     }
 }
 
