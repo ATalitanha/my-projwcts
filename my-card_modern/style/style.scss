@@ -1,0 +1,100 @@
+$first-card: #015bfa;
+$secend-card: #ef5e44;
+$third-card: #fdbe29;
+$end-card: #6c3dc4;
+$firsf-text-color: #2e3350;
+$secend-text-color: #9a9baa;
+$box-shadow: (0 2px 8px rgba(99, 99, 99, 0.2)), (0 2px 8px rgba(99, 99, 99, 0.2) inset);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins';
+}
+
+.container {
+    margin: 5rem auto;
+    max-width: 1330px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+
+    .card-section {
+        .card-all {
+            box-shadow: $box-shadow;
+            display: flex;
+            flex-direction: column;
+            padding: 43px;
+            position: relative;
+            border-radius: 20px;
+
+            .card-info {
+                h4 {
+                    font-size: 1.5rem;
+                    margin: 2rem 0;
+                    color: $firsf-text-color;
+                    font-weight: 700;
+                }
+
+                p {
+                    color: $secend-text-color;
+                }
+            }
+        }
+
+        .card-all::before,
+        .card-all::after {
+            content: '';
+            position: absolute;
+            width: 19%;
+            height: 19%;
+            transition: all 0.4s ease;
+        }
+    }
+
+    .card-all::before {
+        bottom: -2px;
+        right: -2px;
+        border-bottom-right-radius: 20px;
+        border-bottom: 3px solid;
+        border-right: 3px solid;
+    }
+
+    .card-all::after {
+        top: -2px;
+        left: -2px;
+        border-top-left-radius: 20px;
+        border-top: 3px solid;
+        border-left: 3px solid;
+    }
+
+    .card-all-1::before,
+    .card-all-1::after {
+        border-color: $first-card;
+    }
+    .card-all-2::before,
+    .card-all-2::after {
+        border-color: $secend-card;
+    }
+    .card-all-3::before,
+    .card-all-3::after {
+        border-color: $third-card;
+    }
+    .card-all-4::before,
+    .card-all-4::after {
+        border-color: $end-card;
+    }
+
+    .card-section:hover .card-all::before {
+        width: 85%;
+        height: 85%;
+    }
+    .card-section:hover .card-all::after {
+        width: 85%;
+        height: 85%;
+    }
+}

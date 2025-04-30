@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+}
+
+.container {
+  margin: 5rem auto;
+  max-width: 1330px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.container .card-section .card-all {
+  box-shadow: 0 2px 8px rgba(99, 99, 99, 0.2), 0 2px 8px rgba(99, 99, 99, 0.2) inset;
+  display: flex;
+  flex-direction: column;
+  padding: 43px;
+  position: relative;
+  border-radius: 20px;
+}
+.container .card-section .card-all .card-info h4 {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+  color: #2e3350;
+  font-weight: 700;
+}
+.container .card-section .card-all .card-info p {
+  color: #9a9baa;
+}
+.container .card-section .card-all::before,
+.container .card-section .card-all::after {
+  content: "";
+  position: absolute;
+  width: 19%;
+  height: 19%;
+  transition: all 0.4s ease;
+}
+.container .card-all::before {
+  bottom: -2px;
+  right: -2px;
+  border-bottom-right-radius: 20px;
+  border-bottom: 3px solid;
+  border-right: 3px solid;
+}
+.container .card-all::after {
+  top: -2px;
+  left: -2px;
+  border-top-left-radius: 20px;
+  border-top: 3px solid;
+  border-left: 3px solid;
+}
+.container .card-all-1::before,
+.container .card-all-1::after {
+  border-color: #015bfa;
+}
+.container .card-all-2::before,
+.container .card-all-2::after {
+  border-color: #ef5e44;
+}
+.container .card-all-3::before,
+.container .card-all-3::after {
+  border-color: #fdbe29;
+}
+.container .card-all-4::before,
+.container .card-all-4::after {
+  border-color: #6c3dc4;
+}
+.container .card-section:hover .card-all::before {
+  width: 85%;
+  height: 85%;
+}
+.container .card-section:hover .card-all::after {
+  width: 85%;
+  height: 85%;
+}/*# sourceMappingURL=style.css.map */
